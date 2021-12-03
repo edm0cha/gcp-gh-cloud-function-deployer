@@ -7,5 +7,14 @@ variable "region" {
 variable "owner" {
   description = "Engineer ldap"
   type        = string
-  default     = "emoedano"
+}
+
+variable "github_owner" {
+  description = "Github Repository Owner Username"
+  type        = string
+}
+
+variable "github_repository_name" {
+  description = "Github Repository Name"
+  type        = string
 }

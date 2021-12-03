@@ -5,7 +5,13 @@ module "video_captioning" {
 }
 
 module "cloudbuild" {
-  source      = "./modules/cloudbuild"
-  project     = local.project
-  name_prefix = local.name_prefix
+  source                 = "./modules/cloudbuild"
+  project                = local.project
+  name_prefix            = local.name_prefix
+  github_owner           = var.github_owner
+  github_repository_name = var.github_repository_name
+  bucket_url             = module.video_captioning.bucket_url
+  depends_on = [
+    module.video_captioning
+  ]
 }
