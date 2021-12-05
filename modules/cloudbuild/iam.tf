@@ -23,6 +23,8 @@ resource "google_project_iam_custom_role" "function_role" {
     "cloudfunctions.functions.get",
     "cloudfunctions.functions.update",
     "cloudfunctions.operations.get",
+    "storage.objects.list",
+    "storage.objects.create"
   ]
 }
 
