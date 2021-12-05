@@ -11,6 +11,7 @@ module "cloudbuild" {
   github_owner           = var.github_owner
   github_repository_name = var.github_repository_name
   bucket_url             = module.video_captioning.bucket_url
+  function_name          = module.video_captioning.name
   depends_on = [
     module.video_captioning
   ]

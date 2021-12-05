@@ -18,3 +18,7 @@ variable "bucket_url" {
   description = "Cloud Function Archive Bucket"
   type        = string
 }
+variable "function_name" {
+  description = "Cloud Function Name"
+  type        = string
+}
